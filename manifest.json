@@ -1,0 +1,23 @@
+{
+	"name": "Fast Search Video",
+	"description": "Быстрый поиск видео с YouTube во ВКонтакте",
+	"version": "0.0.1",
+	"manifest_version": 3,
+	"icons": {
+		"16": "public/assets/img/icon-16.png",
+		"48": "public/assets/img/icon-48.png",
+		"128": "public/assets/img/icon-128.png"
+	},
+	"action": {
+		"default_title": "Fast Search Video",
+		"default_popup": "popup.html"
+	},
+
+	"permissions": ["scripting", "activeTab", "storage", "tabs"],
+	"host_permissions": ["https://www.youtube.com/*", "https://vkvideo.ru/*"],
+	"optional_host_permissions": ["https://*/*", "http://*/*"],
+	"background": {
+		"service_worker": "background.js",
+		"type": "module"
+	}
+}
